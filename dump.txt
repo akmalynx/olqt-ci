@@ -1,0 +1,26 @@
+28/4/2017
+---Tesc.php---
+$soal = $this->load->library('soal');
+$soal = array(
+  'idsoal','soal',
+  'ayatopsi1'=>'ao1','ayatopsi2'=>'ao2','ayatopsi3'=>'ao3','ayatopsi4'=>'ao4',
+  'opsi1'=>'1','opsi2'=>'2','opsi3'=>'3','opsi4'=>'4','opsijawab'=>'2');//11 elements
+  $opsiarr = array($soal['ayatopsi1'],$soal['ayatopsi2'],$soal['ayatopsi3'],$soal['ayatopsi4']);
+  $opsi2arr = array($soal['opsi1'],$soal['opsi2'],$soal['opsi3'],$soal['opsi4']);
+// $data = array_shift($q->result_array());
+// echo($data['age']);
+$this->soal->setIdsoal($soal[0]);
+$this->soal->setSoal($soal[1]);
+$this->soal->setOpsi($opsiarr);
+$this->soal->setIdopsi($opsi2arr);
+$this->soal->setOpsiJawab($soal['opsijawab']);
+
+// $data = array(
+//   'page' => 'Mulai',
+//   'idsoal' => $this->soal->getIdsoal(),
+//   'soal' => $this->soal->getSoal(),
+//   'opsi' => $this->soal->getOpsi(),//array
+//   'idopsi' => $this->soal->getIdopsi(),//array
+//   'opsijawab' => $this->soal->getIdsoal()
+// );
+--- ---
